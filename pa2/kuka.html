@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="blur">
+	</div>
+
+	<div class="iphone" style="left:0">
+		<div class="iphone-content">
+			<p>
+				Stanford University<br/>
+				Winter 2013-2014<br/><br/>
+
+				Programmed a Kuka Lightweight arm to volley a tennis ball back and forth with a human being.<br/><br/>
+
+				Three main modules controlled the system: vision, orientation, and movement.<br/><br/>
+
+				Using two webcams, the position of the tennis ball was tracked and real-time positions were sent to a computer that would calculate the orientation of the arm and subsequently move it.<br/><br/>
+￼
+			</p>
+		</div>
+	</div>
+
+	<div class="title">
+		<div class="home">
+			<a href="index.html"></a>
+		</div>
+		<p>Djokukavich</p>
+	</div>
+
+	<div class="element-container" id="kuka-1" style="display:none">
+		<img src="res/img/kuka-1.png">
+		<p>
+			The controller for the Kuka arm would unfortunatley stop randomly.  In these cases, there was nothing we could do and had to rerun the test again, hoping it would not fail.
+		</p>
+	</div>
+
+	<div class="element-container" id="kuka-2" style="display:none">
+		<img src="res/img/kuka-2.png">
+		<p>
+			When everything was finally up and running, we monitored the system with a live stream, a terminal of all the packets that get sent between our two processes, and the two programs themselves.
+		</p>
+	</div>
+
+	<div class="element-container" id="kuka-3" style="display:none">
+		<video controls>
+			<source src="res/video/CS_225.mp4" type="video/mp4">
+			<source src="res/video/CS_225.ogg" type="video/ogg">
+			Your browswer does not support HTML5 video.
+		</video>
+	</div>
+
+	<div class="element-container" id="kuka" >
+		<img src="res/img/kuka.png">
+		<p>
+			This is the Kuka arm in start position.  With regards to speed constraints, we start the arm in a known position and toss the ball along that path.  The Kuka arm can go fast enough that if space constraints aren't correctly computed, it can seriously damage itself.
+		</p>
+	</div>
+
+	<div class="iphone" style="right: 0">
+		<div class="iphone-content">
+			<img src="res/img/kuka.png" onclick="toggleDisplay('kuka');">
+			<img src="res/img/kuka-1.png" onclick="toggleDisplay('kuka-1');">
+			<img src="res/img/kuka-2.png" onclick="toggleDisplay('kuka-2');">
+			<img src="res/img/kuka-3.png" onclick="toggleDisplay('kuka-3');">
+		</div>
+	</div>
+
+	<!-- Any scripts to load -->
+  	<script src="js/jquery.js"></script>
+  	<script src="js/bootstrap.js"></script>
+  	<script src="js/index.js"></script>
+	<!-- End Scripts -->
+</body>
+
+</html>
